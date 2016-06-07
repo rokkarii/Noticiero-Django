@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='utf-8'>
+  <title>Sitio De Noticias Ixtapaluca - {% block titulo %}{% endblock %}</title>
+  <link rel='stylesheet' href='{{STATIC_URL}}css/base.css'>
+  <link rel='shortcut icon' href='{{STATIC_URL}}img/ic.png'>
+  <style type="text/css">
+<!--
+.Estilo10 {color: #000000}
+.Estilo21 {font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: #000000; }
+.Estilo23 {color: #000000; font-family: Arial, Helvetica, sans-serif; }
+.Estilo24 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+.Estilo25 {font-family: Arial, Helvetica, sans-serif}
+-->
+  </style>
+  {% block style_css %}{% endblock %}
+  <script src='{{STATIC_URL}}js/jquery-1.7.2.min.js'></script>
+  <script src='{{STATIC_URL}}js/demo.js'></script>
+</head>
+<body>
+  <header>{% block encabezado %}{% endblock %}
+	<nav>
+	  <div align="center">
+	    <TABLE width="989">
+	      <Td width="93" bgcolor="#999999"><div align="center"><a href='/' class="Estilo21">Inicio</a> 
+	        </div>
+	     
+	    <td width="247" bgcolor="#999999"><div align="center"><a href='/noticias' class="Estilo21">Noticias Publicadas </a></div></td>
+	    <td width="160" bgcolor="#999999"><div align="center"><a href="/comenta" class="Estilo21"> Comenta</a></div></td>
+		 <td width="176" bgcolor="#999999"><div align="center"><a href='/usuarios' class="Estilo21">Reporteros</a></div></td>
+	   <td width="173" bgcolor="#999999"><div align="center"><a href="/contacto" class="Estilo21">Contactanos</a></div></td>
+	    <td width="112" bgcolor="#999999"><div align="center"><a href='/sobre' class="Estilo21">Sobre</a></div></td>
+	    <p class="Estilo10">
+	    </TABLE>
+      </div>
+	  
+	</nav>
+	<hr>
+  </header>	
+  <section class='contenido'>
+	{% block contenido %}{% endblock %}
+  </section>
+  
+  
+  </div>
+</body>
+<footer>
+
+Tecnologico De Estudios Superiores De Ixtapaluca &copy; 2016
+</footer>
+</html>
